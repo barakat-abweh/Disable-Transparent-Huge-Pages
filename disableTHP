@@ -2,7 +2,6 @@
 echo 'never' > /sys/kernel/mm/transparent_hugepage/enabled
 echo 'never' > /sys/kernel/mm/transparent_hugepage/defrag
 `cp disable-thp.service /etc/systemd/system/`
-echo "Author : Barakat Abweh"
 `systemctl daemon-reload`
 `systemctl start disable-thp`
 `systemctl enable disable-thp`
